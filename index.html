@@ -210,10 +210,6 @@
         // style the layer
         style: function(feature) {
 
-          var tags = [];
-
-          tags.push(feature.properties.Household_Race);
-
           return {
               stroke: 0.25,
               color: getColorPoc(feature.properties.B_occ),
@@ -221,7 +217,6 @@
               weight: 0.25,
               fillColor: getColorPoc(feature.properties.B_occ),
               fillOpacity: 0.5,
-              tags: tags,
             };
         },
 
@@ -261,7 +256,6 @@
           var tags = []; // declare an empty array for filter tags
 
           tags.push(feature.properties.Decade);
-          tags.push(feature.properties.Restriction);
 
           return {
             stroke: 0.25,
@@ -311,25 +305,11 @@
 
       }).addTo(map); // end restrictiveParcels
 
-      // Households
-      L.control.tagFilterButton({
-        data: ['African-American Household','Latinx Household'],
-        filterOnEveryClick: true,
-        icon: '<i class="fas fa-universal-access" style="font-size:18px; padding-top: 6px;"></i>',
-      }).addTo(map);
-
       // Decades
       L.control.tagFilterButton({
         data: ['1920s','1930s','1940s'],
         filterOnEveryClick: true,
         icon: '<i class="fas fa-hourglass-half" style="font-size:18px; padding-top: 6px;"></i>',
-      }).addTo(map);
-
-      // Restrictions
-      L.control.tagFilterButton({
-        data: ['Subdivision Restriction','Parcel Restriction'],
-        filterOnEveryClick: true,
-        icon: '<i class="fas fa-border-all" style="font-size:18px; padding-top: 6px;"></i>',
       }).addTo(map);
 
       jQuery('.easy-button-button').click(function() {
