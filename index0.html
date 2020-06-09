@@ -292,15 +292,15 @@
       }).addTo(map); // end restrictiveParcels
 
       // create a button to take users to expanded map
-      var map2button = L.easyButton({
-        id: 'map2button',
+      var map1button = L.easyButton({
+        id: 'map1button',
         position: 'topleft',
         states: [{
           stateName: 'change-map',
-          icon: '<i class="fa fa-expand" aria-hidden="true" style="font-size:18px; padding-top: 6px;"></i>',
-          title: 'Expand the map',
+          icon: '<i class="fa fa-compress" aria-hidden="true" style="font-size:18px; padding-top: 6px;"></i>',
+          title: 'Minimize the map',
           onClick: function(e) {
-            window.location.href = 'https://ui-libraries.github.io/IowaCity_Restrictive_Covenants/index0.html';
+            window.location.href = 'https://dsps.lib.uiowa.edu/mappingsegregationia/maps/';
           }
         }]
       }).addTo(map);
