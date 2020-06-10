@@ -291,20 +291,6 @@
 
       }).addTo(map); // end restrictiveParcels
 
-      // create a button to take users to expanded map
-      var map2button = L.easyButton({
-        id: 'map2button',
-        position: 'topleft',
-        states: [{
-          stateName: 'change-map',
-          icon: '<i class="fa fa-expand" aria-hidden="true" style="font-size:18px; padding-top: 6px;"></i>',
-          title: 'Expand the map',
-          onClick: function(e) {
-            window.location.href = 'https://ui-libraries.github.io/IowaCity_Restrictive_Covenants/index0.html','_blank';
-          }
-        }]
-      }).addTo(map);
-
       // Decades
       L.control.tagFilterButton({
         data: ['1920s', '1930s', '1940s'],
